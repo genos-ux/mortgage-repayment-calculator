@@ -18,14 +18,40 @@
         {
             border-radius: none;
         }
+        .custom-border
+        {
+            border: 1px solid black;
+            width: 100%;
+            padding: 4px;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin-top: 12px;
+        }
+
+        .custom-height
+        {
+            max-height: 800px;
+        }
+        .border-radius
+        {
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .custom-flex
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
     </style>
 </head>
 
     <body class="has-background-primary-light has-text-primary-light-invert">
-        <div class="columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless">
+        <div class="columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless is-fullheight">
           <!-- Column 1 -->
           <div class="column is-3">
-            <div class=" box is-flex-column is-justify-content-space-around p-2 is-align-items-center has-text-primary-00" style= "background:white;height: 40vh;">
+            <div class=" p-5 has-text-primary-00" style= "background:white;height: 60vh;">
 
 
                 <div class="is-flex is-justify-content-space-between is-align-items-center">
@@ -61,7 +87,7 @@
 
                         <div class="control has-icons-left has-icons-right">
                             <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
-                            <span class="icon is-small is-right has-text-weight-bold" style="color:black;border-left:1px solid black;width: 40px">
+                            <span class="icon is-small is-right" style="color:black;border-left:1px solid black;width: 40px;font-weight: 700;">
                                 %
                             </span>
 
@@ -70,14 +96,36 @@
                     </div>
 
 
+
+
                 </div>
+
+                <div>
+                    <p>Mortgage type</p>
+                    <div class="control">
+                        <label class="radio custom-border">
+                          <input type="radio" name="answer" />
+                          Yes
+                        </label>
+                        <br/>
+                        <label class="radio custom-border">
+                          <input type="radio" name="answer" />
+                          No
+                        </label>
+                      </div>
+                </div>
+
+                <button class="button is-rounded" style="width:70%;text-align: center;">Rounded</button>
+
+
 
             </div>
           </div>
           <!-- Column 2 -->
           <div class="column is-3 border-radius">
-            <div class="box has-text-centered">
+            <div class="box has-text-centered p-5">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sapiente perferendis exercitationem. Nostrum, debitis! Debitis sunt soluta dignissimos nam, officiis consectetur, eum officia, explicabo praesentium dicta maiores et eius rem numquam commodi assumenda? Error minus debitis eos voluptate amet provident.
+
             </div>
           </div>
         </div>

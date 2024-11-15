@@ -7,9 +7,9 @@
 
     <title>Mortgage-repayment-calculator</title>
     <style>
-        .border-radius
+        .reduce-font
         {
-            border-radius: 3px;
+            font-size: 13px;
         }
         .desktop-center {
             height: 100vh; /* Full viewport height for vertical centering */
@@ -22,11 +22,56 @@
 </head>
 
     <body class="has-background-primary-light has-text-primary-light-invert">
-        <div class="m-0 columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless">
+        <div class="columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless">
           <!-- Column 1 -->
           <div class="column is-3">
-            <div class="box">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sapiente perferendis exercitationem. Nostrum, debitis! Debitis sunt soluta dignissimos nam, officiis consectetur, eum officia, explicabo praesentium dicta maiores et eius rem numquam commodi assumenda? Error minus debitis eos voluptate amet provident.
+            <div class=" box is-flex-column is-justify-content-space-around p-2 is-align-items-center has-text-primary-00" style= "background:white;height: 40vh;">
+
+
+                <div class="is-flex is-justify-content-space-between is-align-items-center">
+                    <h3 class="has-text-weight-bold">Mortgage Calculator</h3>
+                    <button class="reduce-font">Clear All</button>
+
+                </div>
+
+                <p>Mortgage Amount</p>
+                <div class="control has-icons-left">
+                    <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
+                    <span class="icon is-small is-left has-text-weight-bold" style="color:black;border-right:1px solid black;">
+                        €
+                    </span>
+
+                </div>
+
+                <div class="columns is-multiline is-desktop has-border is-gapless is-flex is-align-items-center is-justify-content-space-between">
+                    <div class="column is-6">
+                        <p>Mortgage Term</p>
+
+                        <div class="control has-icons-right has-icons-right mr-3">
+                            <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
+                            <span class="icon is-small is-right has-text-weight-bold" style="color:black;border-left:1px solid black;width:50px;">
+                                years
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div class="column is-6">
+                        <p>Mortgage Term</p>
+
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
+                            <span class="icon is-small is-right has-text-weight-bold" style="color:black;border-left:1px solid black;width: 40px">
+                                %
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
           </div>
           <!-- Column 2 -->

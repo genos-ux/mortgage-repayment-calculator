@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <title>Mortgage-repayment-calculator</title>
     <style>
+        *{
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
         .reduce-font
         {
             font-size: 13px;
@@ -44,6 +48,11 @@
             justify-content: space-around;
             align-items: center;
         }
+
+        .contain > *
+        {
+            margin-bottom: 13px;
+        }
     </style>
 </head>
 
@@ -51,7 +60,7 @@
         <div class="columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless is-fullheight">
           <!-- Column 1 -->
           <div class="column is-3">
-            <div class=" p-5 has-text-primary-00" style= "background:white;height: 60vh;">
+            <div class=" p-5 has-text-primary-00 contain" style= "background:white;">
 
 
                 <div class="is-flex is-justify-content-space-between is-align-items-center">
@@ -85,9 +94,17 @@
                     <div class="column is-6">
                         <p>Mortgage Term</p>
 
-                        <div class="control has-icons-left has-icons-right">
+                        <!-- <div class="control has-icons-left has-icons-right">
                             <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
                             <span class="icon is-small is-right" style="color:black;border-left:1px solid black;width: 40px;font-weight: 700;">
+                                %
+                            </span>
+
+                        </div> -->
+
+                        <div class="control has-icons-right has-icons-right mr-3">
+                            <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
+                            <span class="icon is-small is-right has-text-weight-bold" style="color:black;border-left:1px solid black;width:50px;">
                                 %
                             </span>
 
@@ -115,7 +132,7 @@
                       </div>
                 </div>
 
-                <button class="button is-rounded" style="width:70%;text-align: center;">Rounded</button>
+                <button class="button is-rounded" style="width:70%;text-align: center;margin: 6px 0;">Rounded</button>
 
 
 

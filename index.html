@@ -29,10 +29,18 @@
         {
             border: 1px solid hsl(202, 55%, 16%);
             width: 100%;
-            padding: 4px;
+            padding: 7px;
             border-radius: 5px;
             padding-left: 10px;
             margin-top:5px;
+
+            transition: background-color 0.3s ease;
+
+
+        }
+        .custom-border:focus-within
+        {
+            border: 1px solid hsl(61, 70%, 52%);
         }
 
         .custom-flex
@@ -66,15 +74,16 @@
             margin-bottom: 10px;
         }
 
+
         new-input
         {
             border: 1px solid hsl(202, 55%, 16%);
         }
 
-        input:hover
+        /* input:hover
         {
             border: 1px solid hsl(61, 70%, 52%);
-        }
+        } */
     </style>
 </head>
 
@@ -82,11 +91,11 @@
         <div class="columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless is-fullheight" >
           <!-- Column 1 -->
           <div class="column is-3 dynamic-height" style="color: hsl(202, 55%, 16%);">
-            <div class=" p-5 has-text-primary-00 contain" style="border:1px solid white;border-top-left-radius: 14px;background:white;border-bottom-left-radius: 14px;height:57vh;">
+            <div class=" p-5 has-text-primary-00 contain" style="border:1px solid white;border-top-left-radius: 14px;background:white;border-bottom-left-radius: 14px;height:370px;">
 
 
                 <div class="is-flex is-justify-content-space-between is-align-items-baseline">
-                    <h3 class="has-text-weight-bold">Mortgage Calculator</h3>
+                    <h3 class="has-text-weight-bold mortgage">Mortgage Calculator</h3>
                     <!-- <button class="reduce-font" style="border-bottom:1px solid black">Clear All</button> -->
                     <span class="is-underlined" style="font-size: 11px;cursor:pointer;">Clear All</span>
 
@@ -96,7 +105,7 @@
                     <div>
                         <span>Mortgage Amount</span>
                         <div class="control has-icons-left">
-                            <input class="input is-small new-input has-background-white has-text-black" type="email" required/>
+                            <input class="input is-small new-input has-background-white has-text-black" type="text"/>
                             <span class="icon is-small is-left has-text-weight-bold" style="color:black;border: 1px solid hsl(202, 55%, 16%);background:hsl(202, 86%, 94%);border-right:none;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                 €
                             </span>
@@ -109,7 +118,7 @@
                             <span>Mortgage Term</span>
 
                             <div class="control has-icons-right mr-3">
-                                <input class="input new-input is-small has-background-white has-text-black" type="text" />
+                                <input class="input new-input is-small has-background-white has-text-black" type="text"/>
                                 <span class="icon is-small is-right has-text-weight-bold" style="color:black;width:50px;border: 1px solid hsl(202, 55%, 16%);background:hsl(202, 86%, 94%);border-left:none;border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                                     years
                                 </span>
@@ -118,7 +127,7 @@
 
                         </div>
                         <div class="column is-6">
-                            <span>Mortgage Term</span>
+                            <span>Interest Rate</span>
 
                             <!-- <div class="control has-icons-left has-icons-right">
                                 <input class="input is-small has-background-white has-text-black" type="email" placeholder="Email" />
@@ -146,18 +155,18 @@
                     <div style="position:relative;bottom:10px;">
                         <span>Mortgage type</span>
                         <div class="control">
-                            <label class="radio has-text-weight-semibold custom-border" style="font-size:13px;">
+                            <label class="radio has-text-weight-semibold custom-border repay" style="font-size:13px;">
                             <input type="radio" class="mr-1" name="answer"/>
                             Repayment
                             </label>
-                            <label class="radio has-text-weight-semibold custom-border" style="font-size:13px;">
+                            <label class="radio has-text-weight-semibold custom-border repay" style="font-size:13px;">
                             <input type="radio" name="answer" class="mr-1"/>
                             Interest Only
                             </label>
                         </div>
                     </div>
 
-                    <button class="button is-rounded" style="color:black;text-align: center;background-color: hsl(61, 70%, 52%);border:none; font-weight: 900;">
+                    <button type="submit" class="button is-rounded" style="color:black;text-align: center;background-color: hsl(61, 70%, 52%);border:none; font-weight: 900;">
                         <span class="icon">
                             <i class="fas fa-sm fa-calculator"></i>
                         </span>
@@ -172,10 +181,10 @@
             </div>
           </div>
           <!-- Column 2 -->
-          <div class="column is-3 dynamic-height">
-            <div class="has-text-centered contain p-5 custom-flex" style="height: 57vh;background: hsl(202, 55%, 16%);color:hsl(202, 86%, 94%);">
+          <div class="column is-3 dynamic-height custom-flex">
+            <div class="has-text-centered contain p-5" style="height:370px;;background: hsl(202, 55%, 16%);color:hsl(202, 86%, 94%);">
               <img src="./images/illustration-empty.svg" width="120px" alt="">
-              <h1 style="color: hsl(202, 86%, 94%);font-weight: 900;">Results shown here</h1>
+              <h1 class="results" style="color: hsl(202, 86%, 94%);font-weight: 900;">Results shown here</h1>
               <span style="font-size: 11px;text-align:left;color:hsl(203, 41%, 72%);">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</span>
 
             </div>

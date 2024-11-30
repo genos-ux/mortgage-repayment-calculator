@@ -34,22 +34,23 @@ function changeDiv()
   const miniPara = document.createElement("p");
 
   header.textContent = "Your results";
+  header.style.cssText = "font-weight:700;"
 
   para.textContent = 'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again';
   para.style.cssText = "font-size: 12px;text-align: justify;"
 
-  miniContainer.style.cssText = "border: 1px solid white; padding: 10px;display: flex; flex-direction: column; align-items: start;height: 62%;"
+  miniContainer.style.cssText = "border: 1px solid hsl(200, 83%, 7%); padding: 10px;display: flex; flex-direction: column; align-items: start;justify-content: space-around;height: 62%;width: 86%;border-radius: 10px;background: hsl(200, 83%, 7%);border-top:3px solid hsl(61, 70%, 52%); "
   miniContainer.innerHTML =
   `
-    <div>
-      <p>Your monthly repayments</p>
-      <h1 style="text-align: justify">$1,798.98 </h1>
+    <div style="border-bottom: 1px solid white;width: 90%;padding: 10px 0 15px;margin-left:12px;">
+      <p style="text-align: justify;font-size: 13px;">Your monthly repayments</p>
+      <h1 style="text-align: justify;font-size: 2rem;font-weight: 700;color: hsl(61, 70%, 52%);">$1,798.98 </h1>
 
     </div>
 
-    <div>
-      <p>Total you will repay over the term</p>
-      <h3 style="text-align:justify">$2323.232</h3>
+    <div style="margin-top: 20px;margin-left: 12px;">
+      <p style="font-size:13px;">Total you will repay over the term</p>
+      <h2 style="text-align:justify;font-weight: 700;">$223.232</h2>
     </div>
   `
 

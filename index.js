@@ -30,6 +30,7 @@ btn.addEventListener("click",(event) =>
 
   let monthlyPayment, principalAmount, interestRate,annualPayment, interestTerm = 0;
 
+
   if(mortgageType == "Interest")
   {
     interestRate = rate.value;
@@ -37,9 +38,7 @@ btn.addEventListener("click",(event) =>
     interestTerm = term.value * 12;
 
     monthlyPayment = principalAmount * interestRate;
-
     annualPayment = monthlyPayment * interestTerm;
-
   }
 
   else if(mortgageType == "Repayment")
@@ -53,7 +52,6 @@ btn.addEventListener("click",(event) =>
     annualPayment = monthlyPayment * interestTerm * 12;
 
   }
-
 
 
   div.textContent = "";
@@ -70,13 +68,13 @@ btn.addEventListener("click",(event) =>
   `
     <div style="border-bottom: 1px solid white;width: 90%;padding: 10px 0 15px;margin-left:12px;">
       <p style="text-align: justify;font-size: 13px;color: hsl(202, 86%, 94%);">Your monthly repayments</p>
-      <h1 style="text-align: justify;font-size: 2rem;font-weight: 700;color: hsl(61, 70%, 52%);">€${monthlyPayment.toFixed(3)}</h1>
+      <h1 style="text-align: justify;font-size: 2rem;font-weight: 700;color: hsl(61, 70%, 52%);">€${new Intl.NumberFormat('en-US').format(monthlyPayment.toFixed(3))}</h1>
 
     </div>
 
     <div style="margin-top: 20px;margin-left: 12px;">
       <p style="font-size:13px;">Total you will repay over the term</p>
-      <h2 style="text-align:justify;font-weight: 700;">€${annualPayment.toFixed(3)}</h2>
+      <h2 style="text-align:justify;font-weight: 700;">€${new Intl.NumberFormat('en-US').format(annualPayment.toFixed(3))}</h2>
     </div>
   `
 

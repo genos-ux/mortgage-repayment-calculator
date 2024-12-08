@@ -8,6 +8,8 @@ const rate = document.querySelector('input[name="rate"]');
 
 btn.addEventListener("click",(event) =>
 {
+
+  console.log(amount.value);
   event.preventDefault();
   // console.log(amount.value);
   // console.log(term.value);

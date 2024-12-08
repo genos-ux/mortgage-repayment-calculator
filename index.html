@@ -34,10 +34,7 @@
             border-radius: 5px;
             padding-left: 10px;
             margin-top:5px;
-
             transition: background-color 0.3s ease;
-
-
         }
         .custom-border:focus-within
         {
@@ -58,6 +55,12 @@
         .contain > *
         {
             margin-bottom: 13px;
+
+        }
+
+        .contain
+        {
+            height: 390px;
         }
 
         /* form
@@ -85,6 +88,71 @@
         {
             border: 1px solid hsl(61, 70%, 52%);
         } */
+
+        .first-container{
+            height: 380px;
+        }
+
+        .type
+        {
+            position:relative;
+            bottom:10px;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            body{
+                background-color: white !important;
+            }
+
+            .first-container
+            {
+                height: 600px;
+
+            }
+
+            .first-container > *
+            {
+                position: relative;
+                bottom: 13px;
+            }
+
+            .contain
+            {
+                height: 400px;
+                margin-bottom:0;
+                position: relative;
+                top: 12px;
+            }
+
+            /* .columns
+            {
+                border: 1px solid red;
+            } */
+
+            .term
+            {
+
+                position: relative;
+                bottom: 20px;
+            }
+
+            .type
+            {
+                position: relative;
+                bottom: 32px;
+
+
+            }
+
+            .button
+            {
+                border: 1px solid red;
+                position: relative;
+                bottom: 23px;
+            }
+
+        }
     </style>
 </head>
 
@@ -92,7 +160,7 @@
         <div class="columns is-multiline is-desktop desktop-center is-vcentered is-centered has-border is-gapless is-fullheight" >
           <!-- Column 1 -->
           <div class="column is-3 dynamic-height" style="color: hsl(202, 55%, 16%);">
-            <div class=" p-5 has-text-primary-00 contain" style="border:1px solid white;border-top-left-radius: 14px;background:white;border-bottom-left-radius: 14px;height:370px;">
+            <div class="first-container p-5 has-text-primary-00 contain" style="border:1px solid white;border-top-left-radius: 14px;background:white;border-bottom-left-radius: 14px;">
 
 
                 <div class="is-flex is-justify-content-space-between is-align-items-baseline">
@@ -127,7 +195,7 @@
                             </div>
 
                         </div>
-                        <div class="column is-6">
+                        <div class="column is-6 term">
                             <span>Interest Rate</span>
 
                             <!-- <div class="control has-icons-left has-icons-right">
@@ -153,7 +221,7 @@
 
                     </div>
 
-                    <div style="position:relative;bottom:10px;">
+                    <div class="type">
                         <span>Mortgage type</span>
                         <div class="control">
                             <label class="radio has-text-weight-semibold custom-border repay" style="font-size:13px;">
@@ -183,7 +251,7 @@
           </div>
           <!-- Column 2 -->
           <div class="column is-3 dynamic-height custom-flex">
-            <div class="has-text-centered contain p-5" style="height:370px;;background: hsl(202, 55%, 16%);color:hsl(202, 86%, 94%);">
+            <div class="has-text-centered contain p-5" style="height:370px;background: hsl(202, 55%, 16%);color:hsl(202, 86%, 94%);">
               <img src="./images/illustration-empty.svg" width="120px" alt="">
               <h1 class="results" style="color: hsl(202, 86%, 94%);font-weight: 900;">Results shown here</h1>
               <span style="font-size: 11px;text-align:left;color:hsl(203, 41%, 72%);">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</span>
